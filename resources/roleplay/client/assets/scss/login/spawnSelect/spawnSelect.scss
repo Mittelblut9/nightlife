@@ -1,0 +1,44 @@
+@import '../../variables';
+
+body {
+    background: none;
+}
+
+.container {
+    .row {
+        height: 50vh;
+        width: 90vh;
+    }
+
+    .spawnpoint {
+        filter: blur(1px);
+        transition: transform 0.1s ease-in-out, filter 0.1s ease-in-out;
+        z-index: 0;
+
+        &:hover {
+            cursor: pointer;
+            filter: blur(0);
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+            background: url('../../../img/login/spawnSelect/jobcenter.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(2) {
+            background: url('../../../img/login/spawnSelect/lastPosition.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            h3 {
+                text-shadow: 2px 2px 4px $black;
+            }
+        }
+    }
+}

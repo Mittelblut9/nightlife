@@ -1,0 +1,55 @@
+@import '../../variables';
+
+body {
+    background: none;
+}
+
+.container {
+    .row {
+        height: 50vh;
+        width: 90vh;
+    }
+
+    .character {
+        filter: blur(1px);
+        transition: transform 0.1s ease-in-out, filter 0.1s ease-in-out;
+        z-index: 0;
+
+        &-img {
+            margin: $spacer-3 0;
+
+            img {
+                width: 100px;
+                border: 3px solid $black;
+                border-radius: 50%;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            filter: blur(0);
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+            background: url('../../../img/login/character_1_bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:nth-child(2) {
+            background: url('../../../img/login/character_2_bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+            background: url('../../../img/login/character_3_bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}

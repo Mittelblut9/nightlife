@@ -1,0 +1,41 @@
+name: Server Deployment
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: self-hosted
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+              with:
+                  ref: main
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+
+            - name: Copy data
+              run: |
+                cp ../../../configs/.env .env
+                cp ../../../configs/server.toml server.toml
+                cp ../../../configs/docker-compose.override.yml docker-compose.override.yml
+                cp -R ../../../configs/basic-server/* ./
+
+            - name: Install dependencies
+              run: |
+                npm install --omit=dev --ignore-scripts
+            
+            - name: Build
+              run: |
+                npm run alias-build
+                npm run scss:build
+
+            - name: Run
+              run: |
+                docker compose up -d

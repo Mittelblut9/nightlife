@@ -1,0 +1,33 @@
+{
+    "success": {},
+    "info": {
+        "blips": {
+            "bank": "Bank",
+            "fuelstation": "Tankstelle"
+        }
+    },
+    "warning": {},
+    "error": {
+        "general": {
+            "unexpectedError": "Ein unerwarteter Fehler ist aufgetreten. {error.general.tryAgainLater}",
+            "tryAgainLater": "Bitte versuche es später erneut."
+        },
+        "command": {
+            "notFound": "{error.command.notFound} \"{command}\""
+        },
+        "login": {
+            "noAccountFound": "Mit diesem Social Club-Namen ist kein Konto verknüpft",
+            "notCorrect": "Das Passwort oder der Username ist nicht korrekt",
+            "passwordsDontMatch": "Passwörter stimmen nicht überein",
+            "passwordDontMatchSC": "Username does not match your social club name"
+        },
+        "vehicleapi": {
+            "invalidId": "Ungültige ID angegeben!",
+            "incorrectModel": "Das eingegebende Model ist ungültig",
+            "vehicleSpawned": "Das Fahrzeug wurde gespawnt",
+            "notFound": "{FF0000}Du bist in keinem Fahrzeug",
+            "inputtolong": "{FF0000}Eine Eingabe ist falsch"
+        }
+        
+    }
+}

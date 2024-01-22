@@ -1,0 +1,40 @@
+@import 'variables';
+
+@font-face {
+    font-family: 'Open Sans Light', sans-serif;
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Regular', sans-serif;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Medium', sans-serif;
+    src: url('../fonts/OpenSans-Medium.ttf');
+}
+@font-face {
+    font-family: 'Open Sans Bold', sans-serif;
+    src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+h1 {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h3 {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p, span {
+    font-family: 'Open Sans Regular', sans-serif;
+}

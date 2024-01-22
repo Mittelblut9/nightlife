@@ -1,0 +1,27 @@
+name: '💡 Feature Request'
+description: Erstelle ein neues Ticket für eine neue Funktionsanfrage
+title: '💡 [REQUEST] - <title>'
+labels: ['enhancement']
+body:
+    - type: textarea
+      id: summary
+      attributes:
+          label: 'Zusammenfassung'
+          description: Eine kurze Erklärung des Merkmals
+      validations:
+          required: true
+    - type: textarea
+      id: drawbacks
+      attributes:
+          label: 'Drawbacks'
+          description: Was sind die Nachteile/Auswirkungen Deiner Funktionsanfrage?
+          placeholder: Identifiziere die Nachteile und Auswirkungen, während du dich neutral zu Deiner Anfrage verhälst
+      validations:
+          required: true
+    - type: textarea
+      id: unresolved_question
+      attributes:
+          label: 'Unresolved questions'
+          description: Welche Fragen sind noch ungelöst?
+      validations:
+          required: false

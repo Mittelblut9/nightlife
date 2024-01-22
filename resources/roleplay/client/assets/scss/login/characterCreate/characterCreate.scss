@@ -1,0 +1,73 @@
+@import '../../variables';
+
+body {
+    /** 
+     * todo remove 
+     * */
+    background: url('../../../img/login/characterCreate/cc_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.character-selection-wrapper {
+    height: 76vh;
+    background: $white;
+}
+
+.character-selection-nav {
+    transition: all 0.2s ease-in-out;
+    transform: translate(-3.5rem, -50%) !important;
+
+    /* stylelint-disable */
+    &:not(:hover) li.active { 
+        transform: translateX(2.2rem);
+    }
+
+    &:hover {
+        transform: translate(0, -50%) !important;
+    }
+
+    li {
+        transform: translateX(-15px);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $nl-primary-color !important;
+            transform: translateX(-5px);
+        }
+
+        &.active {
+            background-color: $nl-primary-color !important;
+            transform: translateX(-5px);
+        }
+    }
+}
+
+.character-selection {
+    max-width: 30vw;
+    min-width: 30vw;
+    
+    &-header {
+        transform: translateY(-1px);
+        background-image: url('../../../img/login/characterCreate/cc_1.jpg');
+        background-size: cover;
+        background-position: center;
+        
+        h1 {
+            text-shadow: 0 0 10px rgb(0 0 0 / 0.5);
+        }
+    }
+
+
+    &-content-dna li.active{
+        border: 3px solid $black;
+    }
+}

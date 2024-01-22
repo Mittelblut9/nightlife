@@ -1,0 +1,59 @@
+name: Code Tester
+
+on:
+  pull_request_target:
+      branches: [dev, main]
+
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        services: 
+            mysql: 
+                image: mysql:8.2
+                env: 
+                    MYSQL_ROOT_PASSWORD: root
+                    MYSQL_DATABASE: nightlife_test
+                    MYSQL_USER: nightlife
+                    MYSQL_PASSWORD: nightlife
+                ports: 
+                    - 3311:3306
+                options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                ref: ${{ github.head_ref }}
+                fetch-depth: 0
+            
+            - name: Install dependencies
+              run: npm install
+
+            - name: Test
+              run: |
+                npm run test:ci
+
+            - name: Comment on failed tests
+              uses: actions/github-script@v6
+              if: ${{ failure() && github.event_name == 'pull_request'}}
+              with:
+                script: |
+                    github.rest.issues.createComment({
+                        issue_number: context.issue.number,
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        body: ':warning: Tests failed. Please fix all errors and push again. :warning:'
+                      })
+  
+            - name: Comment on success tests
+              uses: actions/github-script@v6
+              if: ${{ success() && github.event_name == 'pull_request' }}
+              with:
+                script: |
+                    github.rest.issues.createComment({
+                        issue_number: context.issue.number,
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        body: '✅ Tests passed.'
+                    })

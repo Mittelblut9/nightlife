@@ -1,0 +1,23 @@
+
+modules/
+data/
+altv-server.exe
+altv-crash-handler.exe
+node_modules/
+cache/
+server.log
+.server-crashes-cache/
+AltV.Net.Host.dll
+AltV.Net.Host.runtimeconfig.json
+.tools/eslint/.cache/*
+.tools/stylelint/.cache/*
+server.toml
+docker-compose.override.yml
+.DS_Store
+
+.env
+
+# Compiled css
+*.css
+*.css.map
+

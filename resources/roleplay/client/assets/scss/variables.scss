@@ -1,0 +1,38 @@
+// Main Colors
+$nl-primary-color: #2D82B7;
+$nl-secondary-color: #262626;
+
+// Colors
+$black: $nl-secondary-color;
+$blue: $nl-primary-color;
+$pink: #C47AC0;
+$green: #7AC47A;
+$red: #d64a4a;
+$yellow: #d6d64a;
+$orange: #d67a4a;
+$purple: #7a4ad6;
+$white: #fff;
+$gray: #DAD7CD;
+
+// Text
+$nl-font-family: 'Open Sans', sans-serif;
+$font-size-h1: 3rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2rem;
+$font-size-base: 1rem;
+
+// Spacer
+$spacer-1: 0.25rem;
+$spacer-2: 0.5rem;
+$spacer-3: 1rem;
+$spacer-4: 1.5rem;
+$spacer-5: 3rem;
+$spacer-6: 4.5rem;
+$spacer-7: 6rem;
+
+// Special Colors
+$primary-100: #e6f4ff;
+$primary-200: #b3daff;
+$primary-300: #80c1ff;
+$primary-400: #4da8ff;
+$primary-500: $nl-primary-color;

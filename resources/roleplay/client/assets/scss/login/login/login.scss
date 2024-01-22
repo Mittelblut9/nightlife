@@ -1,0 +1,34 @@
+@import '../../variables';
+
+body {
+    background: none;
+}
+
+.box-form {
+    background-color: $nl-primary-color;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 6px #46464685;
+    width: 60vw;
+    max-width: 1400px;
+
+    .col {
+        padding: $spacer-5;
+
+        &:first-child {
+            height: 100%;
+        }
+
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+            background-color: $white;
+
+            img {
+                width: 9rem;
+            }
+
+            .errormsg {
+                color: $red;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+name: '🎨 Design Request'
+description: Erstellen Sie ein neues Ticket für ein neues Design
+title: '🎨 [DESIGN] - <title>'
+labels: ['design']
+body:
+    - type: textarea
+      id: summary
+      attributes:
+          label: 'Zusammenfassung'
+          description: Geben Sie eine kurze Erklärung des Merkmals
+          placeholder: Beschreiben Sie in ein paar Zeilen Ihre Anfrage
+      validations:
+          required: true
+    - type: textarea
+      id: drawbacks
+      attributes:
+          label: 'Drawbacks'
+          description: Was sind die Nachteile/Auswirkungen Ihrer Funktionsanfrage?
+          placeholder: Identifizieren Sie die Nachteile und Auswirkungen, während Sie sich neutral zu Ihrer Anfrage verhalten
+      validations:
+          required: true
+    - type: textarea
+      id: unresolved_question
+      attributes:
+          label: 'Unresolved questions'
+          description: Welche Fragen sind noch ungelöst?
+          placeholder: Ermitteln Sie alle ungelösten Probleme.
+      validations:
+          required: false

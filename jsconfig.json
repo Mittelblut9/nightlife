@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "module": "CommonJS",
+        "paths": {
+            "~client/*": ["./resources/roleplay/client/*"],
+            "~server/*": ["./resources/roleplay/server/*"],
+            "~shared/*": ["./resources/roleplay/shared/*"],
+            "~assets/*": ["./resources/roleplay/client/assets/*"],
+        }
+    },
+    "exclude": ["node_modules"]
+}

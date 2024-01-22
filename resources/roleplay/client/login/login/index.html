@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../assets/css/base.css">
+        <link rel="stylesheet" href="../../assets/css/login/login/login.css">
+    </head>
+
+    <body>
+        <div class="container d-grid align-items-center justify-content-center vh-100">
+            <div class="box-form row d-flex align-items-center">
+                <div class="col">
+                    <div class="overlay user-select-none">
+                        <span id="welcome_msg" class="text-white h1">
+                            <span data-isLoggedIn="true" class="d-none">
+                                Willkommen zurück!
+                            </span>
+                            <span data-isLoggedIn="false" class="d-none">
+                                Willkommen <br> Neuling!
+                            </span>
+                        </span>
+                        <p id="info_text">
+                            <span data-isLoggedIn="true" class="d-none">
+                                Logge dich ein um fortzufahren.
+                            </span>
+                            <span data-isLoggedIn="false" class="d-none">
+                                Es sieht so aus als hättest du keinen Account.
+                                Bitte erstelle dir vorher einen Account um fortzufahren.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="../../assets/img/_logo/nightlife_logo.png" alt="Nightlife Logo">
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <p id="errormsg" class="errormsg"></p>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordInput" class="form-label">Passwort</label>
+                            <input type="password" class="form-control" id="passwordInput" placeholder="*****">
+                        </div>
+                        <div class="mb-3 d-none" id="passwordRepeatInputDiv">
+                            <label for="passwordRepeatInput" class="form-label">Password wiederholen</label>
+                            <input type="password" class="form-control" id="passwordRepeatInput" placeholder="*****">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="./login.js" type="module"></script>
+    </body>
+</html>
